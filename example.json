@@ -1,0 +1,136 @@
+{
+  "workflow": {
+    "id": "Mv90RwEebdh6IajUp4hZX",
+    "name": "Nouvelle campagne",
+    "description": "Workflow marketing initial",
+    "steps": [
+      {
+        "id": "GOmY3ejwbcb3ZZ348MRux",
+        "type": "start",
+        "name": "Start",
+        "position": {
+          "x": -27.5,
+          "y": 141
+        },
+        "transitions": [
+          "loF_rSnNeGWmsR0A3fZAN",
+          "njw4CkVsbfmHS2NZqyrAa"
+        ]
+      },
+      {
+        "id": "qCZ59Ea90bI-45IxunKD-",
+        "type": "end",
+        "name": "End",
+        "position": {
+          "x": 876.4972490511667,
+          "y": 240.35024154427492
+        },
+        "transitions": []
+      },
+      {
+        "id": "V7AdXCDGfDPDN3yRB_H_e",
+        "type": "sms",
+        "name": "SMS-V7Ad",
+        "position": {
+          "x": 533.2055575664177,
+          "y": 137.93494783730773
+        },
+        "transitions": [
+          "KBdbZwhTq50x5k6Qy1zz1"
+        ]
+      },
+      {
+        "id": "4mYacMLKFHnXDHL35DHec",
+        "type": "email",
+        "name": "EMAIL-4mYa",
+        "position": {
+          "x": 172.06611855592666,
+          "y": 271.2332037584881
+        },
+        "transitions": [
+          "fHo3_P3ZRJsgKVdcxwklg",
+          "CxVRuh9cc-p1eSWngRV_-"
+        ]
+      },
+      {
+        "id": "gXbAwJiWbzfBu3WCHWl1_",
+        "type": "start",
+        "name": "START-gXbA",
+        "position": {
+          "x": -45.706891344180804,
+          "y": 472.74154971335213
+        },
+        "transitions": [
+          "LVmWiXsqcenfuwLk1l5k9"
+        ]
+      },
+      {
+        "id": "YvFahZFcZH-PlbC3iOyiJ",
+        "type": "custom",
+        "name": "CUSTOM-YvFa",
+        "position": {
+          "x": 253.80826173995803,
+          "y": 510.2526861050992
+        },
+        "transitions": [
+          "7sUuTeQI7tU9r_ga_3LEU"
+        ]
+      },
+      {
+        "id": "hGSSMbL4BNOdlgFpgk5eT",
+        "type": "end",
+        "name": "END-hGSS",
+        "position": {
+          "x": 598.647244727899,
+          "y": 493.42965289622043
+        },
+        "transitions": []
+      }
+    ],
+    "transitions": [
+      {
+        "id": "loF_rSnNeGWmsR0A3fZAN",
+        "sourceStepId": "GOmY3ejwbcb3ZZ348MRux",
+        "targetStepId": "V7AdXCDGfDPDN3yRB_H_e",
+        "condition": "success"
+      },
+      {
+        "id": "KBdbZwhTq50x5k6Qy1zz1",
+        "sourceStepId": "V7AdXCDGfDPDN3yRB_H_e",
+        "targetStepId": "qCZ59Ea90bI-45IxunKD-",
+        "condition": "success"
+      },
+      {
+        "id": "njw4CkVsbfmHS2NZqyrAa",
+        "sourceStepId": "GOmY3ejwbcb3ZZ348MRux",
+        "targetStepId": "4mYacMLKFHnXDHL35DHec",
+        "condition": "success"
+      },
+      {
+        "id": "fHo3_P3ZRJsgKVdcxwklg",
+        "sourceStepId": "4mYacMLKFHnXDHL35DHec",
+        "targetStepId": "qCZ59Ea90bI-45IxunKD-",
+        "condition": "success"
+      },
+      {
+        "id": "LVmWiXsqcenfuwLk1l5k9",
+        "sourceStepId": "gXbAwJiWbzfBu3WCHWl1_",
+        "targetStepId": "YvFahZFcZH-PlbC3iOyiJ",
+        "condition": "success"
+      },
+      {
+        "id": "7sUuTeQI7tU9r_ga_3LEU",
+        "sourceStepId": "YvFahZFcZH-PlbC3iOyiJ",
+        "targetStepId": "hGSSMbL4BNOdlgFpgk5eT",
+        "condition": "success"
+      },
+      {
+        "id": "CxVRuh9cc-p1eSWngRV_-",
+        "sourceStepId": "4mYacMLKFHnXDHL35DHec",
+        "targetStepId": "V7AdXCDGfDPDN3yRB_H_e",
+        "condition": "failure"
+      }
+    ]
+  },
+  "lastUpdated": "2025-09-29T10:05:22.621Z"
+}
