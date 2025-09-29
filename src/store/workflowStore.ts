@@ -15,8 +15,8 @@ interface WorkflowState {
   isDirty: boolean;
 }
 
-import initialWorkflow from '../../example.json'
-import { importWorkflowFromJson, parseWorkflow } from '../utils/exportImport';
+import initialWorkflow from '../../example.json';
+import { parseWorkflow } from '../utils/exportImport';
 
 const createStep = (type: StepType, overrides: Partial<Step> = {}): Step => {
   const id = overrides.id ?? nanoid();
@@ -30,35 +30,7 @@ const createStep = (type: StepType, overrides: Partial<Step> = {}): Step => {
   };
 };
 
-const createInitialWorkflow = (): Workflow => {
-  const start = createStep('start', {
-    name: 'Start',
-    position: { x: 120, y: 200 },
-  });
 
-  const end = createStep('end', {
-    name: 'End',
-    position: { x: 640, y: 200 },
-  });
-
-  const transitionId = nanoid();
-  const transition: Transition = {
-    id: transitionId,
-    sourceStepId: start.id,
-    targetStepId: end.id,
-    condition: 'success',
-  };
-
-  start.transitions.push(transitionId);
-
-  return {
-    id: nanoid(),
-    name: 'Nouvelle campagne',
-    description: 'Workflow marketing initial',
-    steps: [start, end],
-    transitions: [transition],
-  };
-};
 
 
 // Initial states
