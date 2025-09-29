@@ -34,9 +34,6 @@ const sampleWorkflow: Workflow = {
       condition: 'success',
     },
   ],
-  version: '1.0',
-  createdAt: '2023-01-01T00:00:00.000Z',
-  updatedAt: '2023-01-01T00:00:00.000Z',
 };
 
 describe('exportWorkflowToJson', () => {
@@ -90,9 +87,6 @@ describe('importWorkflowFromJson', () => {
         description: 'test',
         steps: [],
         transitions: [],
-        version: '1.0',
-        createdAt: 'invalid-date',
-        updatedAt: 'invalid-date',
       },
       lastUpdated: '2023-01-01T00:00:00.000Z',
     });
@@ -128,9 +122,6 @@ describe('cloneWorkflow', () => {
       description: '',
       steps: [],
       transitions: [],
-      version: '1.0',
-      createdAt: '2023-01-01T00:00:00.000Z',
-      updatedAt: '2023-01-01T00:00:00.000Z',
     };
     const cloned = cloneWorkflow(emptyWorkflow);
     expect(cloned).toEqual(emptyWorkflow);
